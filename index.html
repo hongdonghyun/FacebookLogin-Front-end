@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="js/cookie.js"></script>
+  <!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <title>facebook login</title>
 </head>
 <body>
-  <h1>Facebook login front-end example</h1>
 
   <script>
   window.fbAsyncInit = function() {
@@ -30,5 +31,24 @@
   }(document, 'script', 'facebook-jssdk'));
   </script>
 
+  <h1>Facebook login front-end example</h1>
+  <button class="btn btn-primary btn-block">Facebook login</button>
+  <script>
+  var hasToken = cookieHasToKen();
+  if (hasToken) {
+
+  }
+
+  function cookiehasToken() {
+    //# 'token'이라는 키에 해당하는 cookie가 있는지 검사결과 리턴
+    var token = getCookie('token');
+    if  (token ==undefined || token == null || token == ''){
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
+  </script>
 </body>
 </html>
